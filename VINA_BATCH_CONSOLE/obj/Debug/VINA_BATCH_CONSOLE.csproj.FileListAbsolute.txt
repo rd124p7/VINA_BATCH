@@ -1,0 +1,5 @@
+C:\Users\Ryan\Documents\Visual Studio 2015\Projects\VINA_BATCH\VINA_BATCH_CONSOLE\bin\Debug\VINA_BATCH_CONSOLE.exe.config
+C:\Users\Ryan\Documents\Visual Studio 2015\Projects\VINA_BATCH\VINA_BATCH_CONSOLE\bin\Debug\VINA_BATCH_CONSOLE.exe
+C:\Users\Ryan\Documents\Visual Studio 2015\Projects\VINA_BATCH\VINA_BATCH_CONSOLE\bin\Debug\VINA_BATCH_CONSOLE.pdb
+C:\Users\Ryan\Documents\Visual Studio 2015\Projects\VINA_BATCH\VINA_BATCH_CONSOLE\obj\Debug\VINA_BATCH_CONSOLE.exe
+C:\Users\Ryan\Documents\Visual Studio 2015\Projects\VINA_BATCH\VINA_BATCH_CONSOLE\obj\Debug\VINA_BATCH_CONSOLE.pdb

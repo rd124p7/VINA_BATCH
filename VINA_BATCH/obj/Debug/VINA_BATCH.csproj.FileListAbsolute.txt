@@ -1,0 +1,9 @@
+C:\Users\Ryan\Documents\Visual Studio 2015\Projects\VINA_BATCH\VINA_BATCH\bin\Debug\VINA_BATCH.exe.config
+C:\Users\Ryan\Documents\Visual Studio 2015\Projects\VINA_BATCH\VINA_BATCH\bin\Debug\VINA_BATCH.exe
+C:\Users\Ryan\Documents\Visual Studio 2015\Projects\VINA_BATCH\VINA_BATCH\bin\Debug\VINA_BATCH.pdb
+C:\Users\Ryan\Documents\Visual Studio 2015\Projects\VINA_BATCH\VINA_BATCH\obj\Debug\VINA_BATCH.csprojResolveAssemblyReference.cache
+C:\Users\Ryan\Documents\Visual Studio 2015\Projects\VINA_BATCH\VINA_BATCH\obj\Debug\VINA_BATCH.frmMain.resources
+C:\Users\Ryan\Documents\Visual Studio 2015\Projects\VINA_BATCH\VINA_BATCH\obj\Debug\VINA_BATCH.Properties.Resources.resources
+C:\Users\Ryan\Documents\Visual Studio 2015\Projects\VINA_BATCH\VINA_BATCH\obj\Debug\VINA_BATCH.csproj.GenerateResource.Cache
+C:\Users\Ryan\Documents\Visual Studio 2015\Projects\VINA_BATCH\VINA_BATCH\obj\Debug\VINA_BATCH.exe
+C:\Users\Ryan\Documents\Visual Studio 2015\Projects\VINA_BATCH\VINA_BATCH\obj\Debug\VINA_BATCH.pdb
