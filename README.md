@@ -1,5 +1,7 @@
-# VINA_BATCH
+## VINA_BATCH
 Allows for multiple .pdbqt files to be processed on at a time by Vina
+
+[Download .zip]https://github.com/rd124p7/VINA_BATCH/releases/download/v1.0/VINA_BATCH_STABLE.zip
 
 # First Time Use Setup
 
