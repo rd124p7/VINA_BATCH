@@ -1,8 +1,6 @@
 ## VINA_BATCH
 Allows for multiple .pdbqt files to be processed on at a time by Vina
 
-[Download .zip]https://github.com/rd124p7/VINA_BATCH/releases/download/v1.0/VINA_BATCH_STABLE.zip
-
 # First Time Use Setup
 
 In order to use VINA_BATCH properly the application will need to be run first, this is to auto generate the folders where the structures, config file, log file, and protein reside. The folder where the application is stored should have a similar to the following folder structure after the application has performed first time startup operations.
