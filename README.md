@@ -1,10 +1,11 @@
 ## VINA_BATCH
-Allows for multiple .pdbqt files to be processed on at a time by Vina
+Allows for multiple .pdbqt files to be processed one at a time by Vina
+
 [Download Current Version v1.0](https://github.com/rd124p7/VINA_BATCH/releases)
 
 # First Time Use Setup
 
-In order to use VINA_BATCH properly the application will need to be run first, this is to auto generate the folders where the structures, config file, log file, and protein reside. The folder where the application is stored should have a similar to the following folder structure after the application has performed first time startup operations.
+In order to use VINA_BATCH properly the application will need to be run first, this is to auto generate the folders where the structures, config file, log file, and protein reside. The folder where the application is stored should have a similar folder structure to the following folder structure after the application has performed first time startup operations.
 
 *   ### Final Folder Structure
       * structures
@@ -25,7 +26,7 @@ In order to use VINA_BATCH properly the application will need to be run first, t
   This is where the protein(.pdbqt), conf.txt, and log.txt will go. These will also have to be manually put in this folder
  
 * ### 'out' folder
-  Once Vina is done with the calculations all the files will go into a folder with the name of the ligand file. For example.
+  Once Vina is done with the calculations all the files will go into a folder with the name of the ligand file. For example,
   * ligand_file_name
     * ligand_file_name.pdbqt
     * protein.pdbqt
