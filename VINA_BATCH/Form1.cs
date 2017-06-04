@@ -19,8 +19,9 @@ namespace VINA_BATCH
         //Default Textbox Values
         public const int EXHAUST_DEFAULT = 512;
         public const int NUMMODE_DEFAULT = 20;
-        public const int CPU_DEFAULT = 6;
-        
+
+        //Insure that we are not trying to use to many cores
+        public int CPU_DEFAULT = (int)(Environment.ProcessorCount / 1.5);   
 
         public frmMain()
         {
@@ -144,10 +145,12 @@ namespace VINA_BATCH
                 if (int.Parse(txtCPU.Text) > Environment.ProcessorCount)
                 {
                     txtCPU.ForeColor = Color.Red;
+                    btnRun.Enabled = false; 
                 }
                 else
                 {
                     txtCPU.ForeColor = Color.Black;
+                    btnRun.Enabled = true;
                 }
             }
             catch (Exception ex)
