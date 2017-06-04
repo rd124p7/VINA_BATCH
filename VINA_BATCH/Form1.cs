@@ -16,6 +16,7 @@ namespace VINA_BATCH
         FFManagement.FolderContentManager fcm = new FFManagement.FolderContentManager();
         FFManagement.FileContentManager ficm = new FFManagement.FileContentManager();
 
+        //Default Textbox Values
         public const int EXHAUST_DEFAULT = 512;
         public const int NUMMODE_DEFAULT = 20;
         public const int CPU_DEFAULT = 6;
@@ -26,6 +27,7 @@ namespace VINA_BATCH
             InitializeComponent();
         }
 
+        //On Form Load
         private void frmMain_Load(object sender, EventArgs e)
         {
             //create the folders if they don't exist
