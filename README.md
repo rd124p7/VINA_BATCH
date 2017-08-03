@@ -1,3 +1,5 @@
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/56b1ef2625df4e1185aa3989c90ea2ff)](https://www.codacy.com/app/rd124p7/VINA_BATCH?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=rd124p7/VINA_BATCH&amp;utm_campaign=Badge_Grade)
+
 ## VINA_BATCH
 Allows for multiple .pdbqt files to be processed one at a time by Vina
 
