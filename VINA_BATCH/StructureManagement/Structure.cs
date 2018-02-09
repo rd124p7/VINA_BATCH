@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 
 namespace VINA_BATCH.FFManagement
 {
@@ -22,7 +23,7 @@ namespace VINA_BATCH.FFManagement
 
         public string GetName()
         {
-            return "";
+            return Path.GetFileName(path);
         }
     }
 }

@@ -44,8 +44,8 @@ namespace VINA_BATCH
     public partial class frmMain : Form
     {
 
-        FFManagement.FolderContentManager fcm = new FFManagement.FolderContentManager();
-        FFManagement.FileContentManager ficm = new FFManagement.FileContentManager();
+        StructureManagement.FolderContentManager fcm = new StructureManagement.FolderContentManager();
+        StructureManagement.FileContentManager ficm = new StructureManagement.FileContentManager();
 
         //Default Textbox Values
         public const int EXHAUST_DEFAULT = 512;
@@ -206,6 +206,9 @@ namespace VINA_BATCH
                 nVinaBatch.BalloonTipTitle = "Done!";
                 nVinaBatch.BalloonTipText = "All files have been processed.";
                 nVinaBatch.ShowBalloonTip(500);
+
+                // Quit the application after finished
+                this.Close();
             }
             else
             {

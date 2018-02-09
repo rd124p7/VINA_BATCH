@@ -11,8 +11,8 @@ namespace VINA_BATCH.VinaProcess
     class VMain : VProcess
     {
 
-        private FFManagement.FolderContentManager fcm = new FFManagement.FolderContentManager();
-        private FFManagement.FileContentManager ficm = new FFManagement.FileContentManager();
+        private StructureManagement.FolderContentManager fcm = new StructureManagement.FolderContentManager();
+        private StructureManagement.FileContentManager ficm = new StructureManagement.FileContentManager();
         public int cpuNum;
         public int exhaust;
         public int num_modes;
