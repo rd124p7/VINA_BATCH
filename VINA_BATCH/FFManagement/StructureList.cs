@@ -58,5 +58,10 @@ namespace VINA_BATCH.FFManagement
         {
             return current;
         }
+
+        public void SetCurrentIndex(int current)
+        {
+            this.current = current;
+        }
     }
 }
