@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.ComponentModel;
-using System.Windows.Forms;
+
 
 namespace VINA_BATCH.VinaProcess
 {
@@ -26,11 +26,11 @@ namespace VINA_BATCH.VinaProcess
             fcm.num_modes = this.num_modes;
         }
 
-        public bool Start(ListBox structList)
+        public bool Start(FFManagement.StructureList structList)
         {
             
             int i = 0;
-            while(i < structList.Items.Count)
+            while(i < structList.GetLength())
             {
                 if(RunSingleProc())
                 {
