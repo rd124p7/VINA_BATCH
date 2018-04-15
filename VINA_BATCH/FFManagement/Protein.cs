@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace VINA_BATCH.FFManagement
 {
-    class Protein : Structure
+    public class Protein : Structure
     {
         private string path = "";
 

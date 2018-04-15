@@ -32,7 +32,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.lstStructures = new System.Windows.Forms.ListBox();
             this.lblStructures = new System.Windows.Forms.Label();
-            this.btnRefresh = new System.Windows.Forms.Button();
             this.btnRun = new System.Windows.Forms.Button();
             this.nVinaBatch = new System.Windows.Forms.NotifyIcon(this.components);
             this.grpMiscSettings = new System.Windows.Forms.GroupBox();
@@ -43,6 +42,7 @@
             this.lblNumModes = new System.Windows.Forms.Label();
             this.lblExaustiveness = new System.Windows.Forms.Label();
             this.groundVina = new System.ComponentModel.BackgroundWorker();
+            this.tmrFilesChanged = new System.Windows.Forms.Timer(this.components);
             this.grpMiscSettings.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -69,18 +69,6 @@
             this.lblStructures.TabIndex = 1;
             this.lblStructures.Text = "Structure Queue";
             this.lblStructures.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // btnRefresh
-            // 
-            this.btnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRefresh.Font = new System.Drawing.Font("Lucida Sans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRefresh.Location = new System.Drawing.Point(237, 242);
-            this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(75, 33);
-            this.btnRefresh.TabIndex = 2;
-            this.btnRefresh.Text = "Refresh";
-            this.btnRefresh.UseVisualStyleBackColor = true;
-            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // btnRun
             // 
@@ -172,6 +160,12 @@
             // 
             this.groundVina.DoWork += new System.ComponentModel.DoWorkEventHandler(this.groundVina_DoWork);
             // 
+            // tmrFilesChanged
+            // 
+            this.tmrFilesChanged.Enabled = true;
+            this.tmrFilesChanged.Interval = 1500;
+            this.tmrFilesChanged.Tick += new System.EventHandler(this.tmrFilesChanged_Tick);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -179,7 +173,6 @@
             this.ClientSize = new System.Drawing.Size(405, 288);
             this.Controls.Add(this.grpMiscSettings);
             this.Controls.Add(this.btnRun);
-            this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.lblStructures);
             this.Controls.Add(this.lstStructures);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
@@ -198,7 +191,6 @@
 
         private System.Windows.Forms.ListBox lstStructures;
         private System.Windows.Forms.Label lblStructures;
-        private System.Windows.Forms.Button btnRefresh;
         private System.Windows.Forms.Button btnRun;
         private System.Windows.Forms.NotifyIcon nVinaBatch;
         private System.Windows.Forms.GroupBox grpMiscSettings;
@@ -209,6 +201,7 @@
         private System.Windows.Forms.Label lblNumModes;
         private System.Windows.Forms.Label lblExaustiveness;
         private System.ComponentModel.BackgroundWorker groundVina;
+        private System.Windows.Forms.Timer tmrFilesChanged;
     }
 }
 

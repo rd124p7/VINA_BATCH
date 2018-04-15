@@ -43,11 +43,11 @@ namespace VINA_BATCH.FFManagement
             return Directory.GetFiles(structuresPath, structureExt);
         }
 
-        public void MoveFiles(string path1, string path2)
+        public void MoveFiles(string dest)
         {
             try
-            {
-                File.Move(path1, path2);
+            { 
+                File.Move(vinaSource, dest);
             }
             catch (FileNotFoundException e)
             {

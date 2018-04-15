@@ -7,7 +7,7 @@ using System.IO;
 
 namespace VINA_BATCH.FFManagement
 {
-    class Structure
+    public class Structure
     {
         private string path = "";
 

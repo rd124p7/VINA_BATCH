@@ -13,7 +13,7 @@ namespace VINA_BATCH.FFManagement
         public int Pos { get; set; }
     }
 
-    class StructureList
+    public class StructureList
     {
         // Store the structures in this List object
         private List<Structure> lstObject = new List<Structure>();
@@ -40,6 +40,11 @@ namespace VINA_BATCH.FFManagement
         public int GetLength()
         {
             return lstObject.Count;
+        }
+
+        public Structure[] toArray()
+        {
+            return lstObject.ToArray();
         }
 
         public StructInfo GetCurrentInfo()

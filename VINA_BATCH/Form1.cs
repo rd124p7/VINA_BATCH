@@ -38,6 +38,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace VINA_BATCH
 {
@@ -52,7 +53,11 @@ namespace VINA_BATCH
         public const int NUMMODE_DEFAULT = 20;
 
         //Insure that we are not trying to use to many cores
-        public int CPU_DEFAULT = (int)(Environment.ProcessorCount / 1.5);   
+        public int CPU_DEFAULT = (int)(Environment.ProcessorCount / 1.5);
+
+        /* -- NEW CODE -- */
+        private static FFManagement.StructureList structList = new FFManagement.StructureList();
+        private FFManagement.Operations ops = new FFManagement.Operations(structList);
 
         public frmMain()
         {
@@ -66,7 +71,7 @@ namespace VINA_BATCH
             Startup.FirstTime firstRun = new Startup.FirstTime();
 
             //Set tooltips
-            helpToolTips(btnRefresh);
+            //helpToolTips(btnRefresh);
             helpToolTips(btnRun);
 
             //Populate lstStructures
@@ -83,22 +88,6 @@ namespace VINA_BATCH
 
         private void helpToolTips(Control ctr)
         {
-            if(ctr == btnRefresh)
-            {
-                ToolTip refreshTip = new ToolTip();
-                refreshTip.ToolTipTitle = "Refresh";
-                refreshTip.UseFading = true;
-                refreshTip.UseAnimation = true;
-                refreshTip.IsBalloon = true;
-                refreshTip.ShowAlways = true;
-                refreshTip.AutoPopDelay = 5000;
-                refreshTip.InitialDelay = 1000;
-                refreshTip.ReshowDelay = 500;
-
-                //Attach the tooltip with Control(button)
-                refreshTip.SetToolTip(btnRefresh, "Pressing refresh will update the list.");
-            }
-
             if(ctr == btnRun)
             {
                 ToolTip refreshTip = new ToolTip();
@@ -119,8 +108,7 @@ namespace VINA_BATCH
         private void populateStructureList()
         {
            //Populate the listbox with the structures in the folder
-            for (int i = 0; i < fcm.GetStructureNames().Length; i++)
-                lstStructures.Items.Add(fcm.GetStructureNames()[i]);
+
         }
 
         private void btnRun_Click(object sender, EventArgs e)
@@ -161,13 +149,6 @@ namespace VINA_BATCH
             this.WindowState = FormWindowState.Normal;
         }
 
-        private void btnRefresh_Click(object sender, EventArgs e)
-        {
-            //Force the program to repopulate the list
-            lstStructures.Items.Clear();
-            populateStructureList();
-        }
-
         private void txtCPU_TextChanged(object sender, EventArgs e)
         {
             try
@@ -200,7 +181,7 @@ namespace VINA_BATCH
                 Int32.Parse(txtNumModes.Text)
                 );
 
-            if (vm.Start(lstStructures))
+            if (vm.Start(structList))
             {
                 nVinaBatch.Visible = true;
                 nVinaBatch.BalloonTipTitle = "Done!";
@@ -212,6 +193,22 @@ namespace VINA_BATCH
                 nVinaBatch.Visible = false;
             }
            
+        }
+
+        private void tmrFilesChanged_Tick(object sender, EventArgs e)
+        {
+            lstStructures.Items.AddRange(structList.toArray());
+        }
+
+        private void MoveRoutine()
+        {
+            string destination = Path.Combine(Directory.GetCurrentDirectory(), "out");
+            string structOutFolder = structList.GetCurrentInfo().Name;
+            Directory.CreateDirectory(Path.Combine(destination, structOutFolder));
+
+            string finalDestination = Path.Combine(destination, structOutFolder);
+            
+
         }
     }
 }
